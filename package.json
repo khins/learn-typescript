@@ -1,0 +1,15 @@
+{
+  "name": "typescript-beginner-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A beginner TypeScript project",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node lesson1.ts",
+    "dev": "ts-node lesson1.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
