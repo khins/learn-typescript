@@ -29,29 +29,26 @@ console.log("Updated foods:", favoriteFoods);
 
 // An object groups related values together.
 // This object has three properties: name, age, and isLearning.
-let student: {
+type Student = {
   name: string;
   age: number;
   isLearning: boolean;
-} = {
-  name: "Kevin",
-  age: 25,
-  isLearning: true
 };
 
-console.log("Student name:", student.name);
-console.log("Student age:", student.age);
-console.log("Is learning:", student.isLearning);
+let students: Student[] = [
+  { name: "Alice", age: 20, isLearning: true },
+  { name: "Bob", age: 22, isLearning: false },
+  { name: "Charlie", age: 19, isLearning: true },
+];
 
 // This function takes an object and returns a sentence.
 // The parameter person has a specific structure (name, age, isLearning).
 // The function uses template literals (backticks) to create a string that includes the person's information.
-function describeStudent(person: {
-  name: string;
-  age: number;
-  isLearning: boolean;
-}): string {
+function describeStudent(person: Student): string {
   return `${person.name} is ${person.age} years old. Learning TypeScript: ${person.isLearning}`;
 }
 
-console.log(describeStudent(student));
+for (let student of students) {
+  console.log(describeStudent(student));
+}
+
